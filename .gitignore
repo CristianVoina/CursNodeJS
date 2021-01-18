@@ -1,0 +1,5 @@
+.vscode
+debug.log
+config/environments/development.js
+config/environments/production.js
+node_modules/
