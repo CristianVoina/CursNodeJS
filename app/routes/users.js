@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 const helprCtrl = require('../helpers');
 const userCtrl = require('../controllers/users');
-const isAdmin = true;
+const isAdmin = false;
 
 
 router.use(function(req,res,next){
@@ -20,7 +20,8 @@ router.use(function(req,res,next){
         next();
     }
     else{
-        res.send("User not Authorized!");
+        //res.send("User not Authorized!");
+        next("User Not Authorized!");
     }
 })
 
